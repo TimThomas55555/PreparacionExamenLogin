@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    tools:context=".LoginActivity">
+    <!--aqui decidimos el color del fondo de la imagen Linea8-->
+
+    <ImageView
+        android:id="@+id/imagenPerro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/perro" />
+
+    <ImageView
+        android:id="@+id/imagenPatita"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patita" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.5"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenPatita">
+    <!--Con esto consigo constrain de la imagen de la para para que se me quede anclado-->
+    <!--EN la linea 42, alpha es para la opaciodad-->
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Escriba su contraseña" />
+        <!--EN la linea 64puedo poner android:text="name"-->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/rojo"
+        android:text="LOG IN"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/LinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="INVITADO"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/LinearLayout"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout" />
+    <!--aqui decidimos la posicion de la foto Linea19 -->
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="32dp"
+        android:alpha="0.8"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/button2"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintStart_toStartOf="@id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button2">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/rojo"
+            android:text="LOG IN" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="INVITADO"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="260dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:text="have you gt an account? Register"
+        android:textColor="@color/negro"
+        app:layout_constraintEnd_toEndOf="@+id/LinearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/LinearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout2"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/signup_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Aún no tienes cuenta?"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_ir_crearCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="REGÍSTRATE"
+            android:textColor="@drawable/registratecambiocolortexto"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/boton_login"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/estilobotonpresionar"
+        android:text="INICIAR SESION"
+        android:textColor="@drawable/cambiocolorletra"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/LinearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/LinearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout3" />
+
+    <Button
+        android:id="@+id/view"
+        android:text="Go PRO"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintEnd_toEndOf="@+id/boton_login"
+        app:layout_constraintStart_toStartOf="@+id/boton_login"
+        app:layout_constraintTop_toBottomOf="@+id/boton_login"
+        android:background="@drawable/botonprofesoropciones" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

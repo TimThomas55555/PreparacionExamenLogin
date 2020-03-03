@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.rcl.appuem.MainActivity">
+    <item
+        android:id="@+id/error"
+        android:icon="@drawable/ic_error"
+        android:title="Item"
+        app:showAsAction="always" /><!--esta linea indica que muestra un icono
+        en la linea 9 he creado un icono a traves de image asset-->
+    <item
+        android:id="@+id/camera"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Item"
+        app:showAsAction="always" /><!--esta linea indica que muestra un icono
+        en la linea 15, introduzco un icono preestablecido por android-->
+    <item
+        android:id="@+id/otro"
+        android:icon="@android:drawable/gallery_thumb"
+        android:title="Item"
+        app:showAsAction="always" /><!--esta linea indica que muestra un icono
+        en la linea 15, introduzco un icono preestablecido por android-->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Noticias"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings1"
+        android:orderInCategory="200"
+        android:title="Programacion"
+        app:showAsAction="never" />
+
+</menu>
